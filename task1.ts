@@ -15,3 +15,15 @@ function deleteDuplicates(arr: number[]) {
 }
 
 console.log(deleteDuplicates(array));
+
+function deleteDuplicatesObj(arr: number[]) {
+  const duplicateArr: Record<string, number> = {};
+  for (const i of arr) {
+    if (!duplicateArr.i) {
+      duplicateArr[i] = i;
+    }
+  }
+  return Object.values(duplicateArr);
+}
+
+console.log(deleteDuplicatesObj(array));
