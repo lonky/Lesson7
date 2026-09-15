@@ -5,9 +5,9 @@ const array2 = [1, [2, 3], [4], 5, [6, 7, 8, [9, 10, 11]]];
 
 // const result = [1, 2, 3, 4, 5, 6, 7, 8];
 
-type RecursiveType<T> = (T | RecursiveType<T>)[];
+type RecursiveArrayType<T> = (T | RecursiveArrayType<T>)[];
 
-function flattenArr<T>(arr: RecursiveType<T>) {
+function flattenArr<T>(arr: RecursiveArrayType<T>) {
   const flatArr: T[] = [];
   for (const i of arr) {
     if (Array.isArray(i)) {
